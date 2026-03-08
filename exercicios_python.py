@@ -109,9 +109,103 @@ def listaOrganizada():
     print('\nO tamanho da lista (número de elementos) é de:')
     print(len(carros))
 
-def 
+def usosListas():
+    jogadores = ['João', 'Manuela', 'Alice', 'Daniel']
+    for jogador in jogadores:
+        print(jogador.title() + ', essa foi uma boa jogada!')
+        print("Eu mal posso esperar para ver você jogar de novo, " + jogador.title() + ".\n")
+        
+    print('Obrigado, esse foi realmente um bom jogo!')
+
+def listaNumeros():
+    """Cria uma lista com todos os números, a partir de 1 e
+    antes de 6"""
+    numeros = list(range(1,6))
+    print(numeros)
+    
+    """Cria uma lista com todos os números, a partir de 2, antes
+    de 11 e com o espaçamento de 2 números entre cada um"""
+    numeros_pares = list(range(2,11,2))
+    print(numeros_pares)
+    
+    """Cria uma lista das raizes de todos os números
+    (ex: raiz quadrada de 4 = 2, então 4 está no lugar
+    de 2 na lista)"""
+    raizes = []
+    for valor in range(1,11):
+        raiz = valor**2
+        raizes.append(raiz)
+        
+    print(raizes)
+    
+    digitos = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+    """Imprime o menor número da lista"""
+    print(min(digitos))
+    
+    """Imprime o maior número da lista"""
+    print(max(digitos))
+    
+    """Imprime a soma de todos os números da lista"""
+    print(sum(digitos))
+    
+def compreensaoLista():
+    """Cria uma lista como se fosse com um for, mas de forma simplificada"""
+    """Passa o valor de todas as raizes de todos os números,
+    a partir de 1 e antes de 11, na variável 'raizes'"""
+    raizes = [valor**2 for valor in range(1,11)]
+    
+    print(raizes)
+    
+def fatiandoListas():
+    jogadores = ['Carlos', 'Maria', 'Miguel', 'Fernanda', 'Eliel']
+    
+    """Imprime os elementos entre 1 e 4"""
+    print(jogadores[1:4])
+    
+    """Imprime os elementos entre o começo até 
+    antes dos dois últimos"""
+    print(jogadores[:-2])
+    
+    """Imprime todos os números entre o terceiro 
+    até o final"""
+    print(jogadores[-3:])
+    
+def copiandoListas():
+    minhas_comidas = ['Pizza', 'Hamburger', 'Bolo de Cenoura']
+    comidas_amigos = minhas_comidas[:]
+    
+    minhas_comidas.append('Bolo de Chocolate')
+    comidas_amigos.append('Sorvete')
+    
+    print('Minhas comidas favoritas são:')
+    print(minhas_comidas)
+    
+    print('\nAs comidas favoritas dos meus amigos são:')
+    print(comidas_amigos)
+    
+def tuplas():
+    """Tuplas são listas que não podem ser alteradas, muito 
+    usadas para definir padrões, como constantes matemáticas 
+    (pi = 3,14, etc)"""
+    
+    dimensoes = (200, 50)
+    print('Dimensões originais:')
+    for dimensao in dimensoes:
+        print(dimensoes)
+    
+    dimensoes = (400, 100)
+    print('\nDimensões modificadas:')
+    for dimensao in dimensoes:
+        print(dimensoes)
+    """Se tentar alterar algum elemento de uma tupla, gera o erro:
+    Traceback (most recent call last):
+        File '<pyshell#14>', line 1, in <module>
+            dimensoes[0]=250
+        TypeError: 'tuple' object does not support item assignment"""
+    """dimensoes[0]=250"""
+
 def main():
-    listaOrganizada()
+    tuplas()
     
 if __name__ == "__main__":
     main()
