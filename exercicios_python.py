@@ -1,3 +1,7 @@
+"""============================================================="""
+"""Python intensivo 1-5"""
+"""============================================================="""
+
 def saudacao():
     print('Hello World!')
 
@@ -203,9 +207,77 @@ def tuplas():
             dimensoes[0]=250
         TypeError: 'tuple' object does not support item assignment"""
     """dimensoes[0]=250"""
-
-def main():
-    tuplas()
     
+def instrucoesIf():
+    carros = ['audi', 'bmw', 'subaru', 'toyota']
+    
+    for carro in carros:
+        if carro == 'bmw':
+            print(carro.upper())
+        else:
+            print(carro.title())
+
+def diferenca():
+    carros = ['audi', 'bmw', 'subaru', 'toyota']
+    
+    for carro in carros:
+        if carro != 'bmw':
+            print(carro.upper())
+        else:
+            print(carro.title())
+            
+    resposta = 17
+    
+def operadoresRelacionaisLogicos():
+    """idade = 18
+    idade > 20 (false)
+    idade >= 18 (true)
+    idade < 15 (false)
+    idade <= 18 (true)
+    idade >= 15 and idade <= 21 (true)
+    idade < 15 or idade 21 (false)"""
+    
+    """condimentos = ['Ketchup', 'Mostarda', 'Maionese']
+    'Ketchup' in condimentos (true)
+    'cebola' in condimentos (false)"""
+
+def condicional():
+    idade = 17
+    if idade >= 18:
+        print("Você é velho o bastante para votar!")
+        print("Você já registrou o seu voto?")
+    else:
+        print("Desculpe, você é novo demais para votar.")
+        print("Por favor, registre o seu voto em breve, quando for maior de 18!")
+
+    idade = 12
+    
+    if idade < 4:
+        preco = 2
+    elif idade < 18:
+        preco = 5
+    elif idade < 65:
+        preco = 10
+    else:
+        preco = 5
+        
+    print("O custo da sua admissão é de R$ " + str(preco) + ".")
+    
+    condimentosDisponiveis = ['Ketchup', 'Mostarda', 'Maionese',
+                                'Shoyo', 'Pimenta', 'Alho']
+    
+    condimentosPedidos = ['Ketchup', 'Mostarda', 'Alho']
+    
+    for condimentoPedido in condimentosPedidos:
+        if condimentoPedido in condimentosDisponiveis:
+            print("Adicionando " + condimentoPedido + ".")
+        else:
+            print("Desculpe, nós não temos " + condimentoPedido + ".")
+    
+    print("\nFinalizando o seu pedido!")
+    
+def main():
+    condicional()
+
 if __name__ == "__main__":
     main()
