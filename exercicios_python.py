@@ -276,6 +276,10 @@ def condicional():
     
     print("\nFinalizando o seu pedido!")
 
+"""============================================================="""
+"""Python intensivo 6"""
+"""============================================================="""
+
 def dicionario():
     carro = {'cor': 'verde', 'hp': 5}
 
