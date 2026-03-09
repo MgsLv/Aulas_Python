@@ -275,9 +275,46 @@ def condicional():
             print("Desculpe, nós não temos " + condimentoPedido + ".")
     
     print("\nFinalizando o seu pedido!")
+
+def dicionario():
+    carro = {'cor': 'verde', 'hp': 5}
+
+    print(carro['cor'])
+
+    """Adicionando novos pares chave-valor"""
+    carro['preco'] = 19000
+    carro['ano'] = 2012
+
+    print(carro)
+
+    """Modificando um dicionário"""
+    if carro['ano'] >= 2010:
+        desvalorizacao = -1000
+    elif carro['ano'] >= 2000:
+        desvalorizacao = -2000
+    else:
+        desvalorizacao = -4000
+
+    carro['preco'] = carro['preco'] + desvalorizacao
+    
+    print("Novo valor do preco: " + str(carro['preco']))
+
+    """Removendo pares chave-valor"""
+    del carro['hp']
+    print(carro)
+
+    videogames_favoritos = {
+        'Daniel': 'N64',
+        'Sarah': 'PS Vita',
+        'José': 'PS4',
+        'Rebeca': 'XBOX One'
+    }
+
+    for nome, videogame in videogames_favoritos.items():
+        print("O videogame favorito de " + nome.title(0) + " É: " + videogame.title() + ".")
     
 def main():
-    condicional()
+    dicionario()
 
 if __name__ == "__main__":
     main()
